@@ -40,4 +40,12 @@ public class Moto extends Vehiculo {
 		return "Moto";
 	}
 
+	@Override
+	public void bajarPasajero() {
+		this.acompaniante = null;
+		this.setCantPersonas(1);
+	}
+	
+	
+
 }

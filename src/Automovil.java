@@ -38,4 +38,10 @@ public class Automovil extends Vehiculo {
 		return "Automovil";
 	}
 	
+	@Override
+	public void bajarPasajero() {
+		this.acompaniante = null;
+		this.setCantPersonas(1);
+	}
+	
 }

@@ -48,5 +48,7 @@ public abstract class Vehiculo {
 	public abstract boolean subirPasajero(Persona p);
 
 	public abstract boolean vehiculoConEspacio();
+	
+	public abstract void bajarPasajero();
 
 }

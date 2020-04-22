@@ -27,6 +27,7 @@ public class Colectivo extends Vehiculo {
 
 		return false;
 	}
+	
 
 	@Override
 	public boolean vehiculoConEspacio() {
@@ -38,6 +39,11 @@ public class Colectivo extends Vehiculo {
 	@Override
 	public String getType() {
 		return "Colectivo";
+	}
+
+	@Override
+	public void bajarPasajero() {
+		this.setCantPersonas(this.getCantPersonas()-1);
 	}
 
 }
