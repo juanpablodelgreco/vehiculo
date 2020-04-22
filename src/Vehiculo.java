@@ -23,6 +23,10 @@ public abstract class Vehiculo {
 		this.kmRecorridos = kmRecorridos;
 	}
 
+	public double getKmRecorridos() {
+		return this.kmRecorridos;
+	}
+
 	public void setCantPersonas(int cantPersonas) {
 		this.cantPersonas = cantPersonas;
 	}
@@ -31,9 +35,18 @@ public abstract class Vehiculo {
 		return this.cantPersonas;
 	}
 
-	public abstract void cambiarChofer(Persona p);
+	@Override
+	public String toString() {
+		return "Soy un " + getType() + " tengo de chofer a " + this.getChofer() + " y recorri " + this.kmRecorridos
+				+ " km y tengo " + (this.cantPersonas - 1) + " pasajeros";
+	}
+
+	public abstract String getType();
+
+	public abstract boolean cambiarChofer(Persona p);
 
 	public abstract boolean subirPasajero(Persona p);
 
 	public abstract boolean vehiculoConEspacio();
+
 }
